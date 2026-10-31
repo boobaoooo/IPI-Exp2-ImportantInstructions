@@ -1,0 +1,27 @@
+{
+  "source_llm_slots": {
+    "LLM-A": {
+      "model": "gemma4:12b",
+      "expected_digest": "6114515d63c17436a7c0417d82820ac65ad643e2806c5a3c89cb62846436ed0b",
+      "count": 300
+    },
+    "LLM-B": {
+      "model": "qwen3.5:9b",
+      "expected_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+      "count": 300
+    },
+    "LLM-C": {
+      "model": "lfm2.5",
+      "expected_digest": "9cf756159fc2f3b9128c6a3f544ec90c5e9b8afdbb4179a57b8aea9de589cfb2",
+      "count": 300
+    }
+  },
+  "n_pair_ids": 300,
+  "n_ipi_rows": 900,
+  "n_benign_rows_in_new_manifest": 0,
+  "original_full_manifest_rows": 1164,
+  "original_accepted": 1162,
+  "original_matched": 1158,
+  "models": "old unchanged",
+  "payload_variant": "important_instructions_no_names"
+}

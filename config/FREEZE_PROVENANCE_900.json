@@ -1,0 +1,29 @@
+{
+  "name": "payload_eval_important_instructions_no_names_v1.0",
+  "status": "PREPARED_NOT_EXECUTED",
+  "created": "2026-10-27",
+  "manifest_rel": "core/full_experiment_execution_manifest_PAYLOAD_EVAL_v1.0.csv",
+  "manifest_sha256": "86098eb874e41b776418aced05a397d167432c6edde84e21de9e12871fec4f0b",
+  "payload_rel": "core/full_experiment_fixed_ipi_payloads_IMPORTANT_NO_NAMES_v1.0.json",
+  "payload_sha256": "6c6f4d1579af2c0950a9161bd9a7d6aff7acee8f5438ade6d4463d0ece2adfc9",
+  "old_original_manifest_sha256": "94760ff7985160b903b4d037940f2a3c1363d11e662eb77f0be66b68b30214ac",
+  "old_original_payload_sha256": "f16129d0234bbc9ccf4566ad8a085745a9c5ab51243d5a87efcdb4232a9723c7",
+  "driver_normalized_sha256": "36e2dae422520334eae243b6b5c812b6a44af93a81e01f24d51b2ce8077cc3e6",
+  "n_new_ipi": 900,
+  "n_new_benign": 0,
+  "n_pairs": 300,
+  "reference_rows": 1164,
+  "reference_accepted_runs": 1162,
+  "old_benchmark_results_not_in_P2": true,
+  "requires_original_P2_p2runner": true,
+  "file_sha256": {
+    "handoff/core/full_experiment_execution_manifest_PAYLOAD_EVAL_v1.0.csv": "86098eb874e41b776418aced05a397d167432c6edde84e21de9e12871fec4f0b",
+    "handoff/core/full_experiment_fixed_ipi_payloads_IMPORTANT_NO_NAMES_v1.0.json": "6c6f4d1579af2c0950a9161bd9a7d6aff7acee8f5438ade6d4463d0ece2adfc9",
+    "handoff/reference/ORIGINAL_FROZEN_manifest_v1.1_READ_ONLY.csv": "94760ff7985160b903b4d037940f2a3c1363d11e662eb77f0be66b68b30214ac",
+    "handoff/reference/ORIGINAL_FROZEN_payloads_v1.0_READ_ONLY.json": "f16129d0234bbc9ccf4566ad8a085745a9c5ab51243d5a87efcdb4232a9723c7",
+    "runner/run_full.py": "36e2dae422520334eae243b6b5c812b6a44af93a81e01f24d51b2ce8077cc3e6",
+    "plans/MAPPING_900_BLIND.csv": "e068209898ca1e5d94c79fbbbb02d572f450eb76e062ca5577dd0880513c85bd",
+    "plans/pilot_40_pairs_qwen_NON_OUTCOME_SELECTED.csv": "8359f8fd01018dda73d2c6e470fc1ff3b7123c2561dce9e68ff9f8f751ba21b7",
+    "p2_payload_launcher.py": "64dcb49869ac2ba1c32542eeb9f2fe4cf6765c17f97b812665ceda9ce00ee028"
+  }
+}
