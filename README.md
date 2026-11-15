@@ -1,6 +1,6 @@
 # Experiment 2: IPI with AgentDojo "Important Instructions" Payload
 
-This repository contains the execution package and raw agent trajectories for **Experiment 2** of the project *Cross-LLM Generalization of Supervised Behavioral Detection for Indirect Prompt Injection in Tool-Using LLM Agents* (SIIT, Thammasat University, 2026). The runs were executed by the P2 (execution) role. **The IPI trajectories used in the paper come from this experiment.**
+This repository contains the execution package and raw agent trajectories for **Experiment 2** of the project *Beyond Payload Presence: Evaluating Whether Behavioral Detection of Indirect Prompt Injection Transfers Across LLMs* (SIIT, Thammasat University, 2026). The runs were executed by the P2 (execution) role. **The IPI trajectories used in the paper come from this experiment.**
 
 Experiment 1 (https://github.com/boobaoooo/IPI-Exp1-Baseline-InjecAgent) used a fixed InjecAgent-style template, which produced too few attacker-induced actions for supervised learning. Experiment 2 keeps everything else identical and changes only the payload template to AgentDojo's `important_instructions` attack **without names** (`agentdojo_important_instructions_no_names_fixed_v0.1`). This template wraps the attacker goal in an `<INFORMATION>` block that is presented as a message from the user.
 
@@ -35,6 +35,8 @@ config/
   pilot_*                               Stage-1/2 condition list and schedules
   PILOT_120_RUN_IDS_EXCLUDED_from_780.csv
   FREEZE_PROVENANCE_*.json, MODEL_SLOTS_AND_COUNTERS.json
+p2runner/                               Runner package v0.2.2 (4 files); source hash `32395aea…`, identical to Experiment 1
+batch_controller.py, validate_outputs.py, monitor_runtime.py   Helper scripts used during the runs
 code/
   run_full.py                           Frozen batch driver (same as Exp 1)
   p2_payload_launcher_*.py              Launchers that point the frozen driver at the new manifest/payloads
@@ -51,10 +53,13 @@ logs/       Console logs of each stage (converted to UTF-8) and the stage-3 summ
 
 The record format is the same as in Experiment 1 (`raw_run/0.1`). Model-reported multiple tool calls per step occurred despite `parallel_tool_calls=false` (172 of the 890 accepted IPI runs: Qwen 77, LFM 74, Gemma 21). Every such call was executed and logged.
 
+## Running the code
+
+The runner package and helper scripts are included, with SHA-256 values in `SHA256SUMS.txt` (newline-normalised; `monitor_runtime.py` is `244fa6747b297827f19a73d78de434ce23d73ebd45fa1d0ceccb513c522140e2`). On the execution machine all of these files sat in one working folder next to `run_full.py`; to reproduce that layout, copy `code/run_full.py` next to `p2runner/`. Running also needs AgentDojo 0.1.35, the three Ollama models at the digests above, and the frozen manifests in `config/`. The package was not re-run for this release.
+
 ## What is not included
 
 - **Ground-truth labels** (`ipi_affected`), adjudication evidence, the exposure overlay, **AgentDojo evaluator outcomes** (`eval_evidence.jsonl`), and **environment snapshots**. These are owned by the adjudication role (P1).
-- **`p2runner/` and helper scripts.** See the expected hashes in the Experiment 1 README. They will be added from the execution machine.
 
 ## Notes
 
